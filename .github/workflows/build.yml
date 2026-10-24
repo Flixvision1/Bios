@@ -11,9 +11,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Install Tuist
+      - name: Install Tuist via Homebrew or Curl
         run: |
-          curl -sL https://get.tuist.io | bash
+          curl -Ls https://install.tuist.io | bash
+          echo "$HOME/.tuist/bin" >> $GITHUB_PATH
+          tuist --version
           tuist generate
 
       - name: Build Archive
