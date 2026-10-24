@@ -5,7 +5,7 @@ workflows:
     environment:
       xcode: latest
     scripts:
-      - name: Extract and Build
+      - name: Extract ZIP files and Run Tuist
         script: |
           echo "=== Extracting ZIP files ==="
           for f in *.zip; do
@@ -13,6 +13,16 @@ workflows:
               unzip -q "$f" -d .
             fi
           done
+          
+          # دڵنیابوون لە بوونی توایست و دروستکردنی فایلەکان
+          if command -v tuist &> /dev/null; then
+            echo "Running tuist generate..."
+            tuist generate --no-open
+          else
+            echo "Installing tuist..."
+            curl -Ls https://install.tuist.io | bash
+            tuist generate --no-open
+          fi
           
           # دروستکردنی فایلی entitlements بۆ پاراستن
           printf '<?xml version="1.0" encoding="UTF-8"?>\n' > Project.entitlements
