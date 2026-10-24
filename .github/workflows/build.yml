@@ -11,6 +11,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Unzip Required Folders
+        run: |
+          if [ -f "LeanIOS.zip" ]; then unzip -q LeanIOS.zip; fi
+          if [ -f "FlixVision.xcodeproj.zip" ]; then unzip -q FlixVision.xcodeproj.zip; fi
+          if [ -f "FlixVision.xcworkspace.zip" ]; then unzip -q FlixVision.xcworkspace.zip; fi
+
       - name: Install Tuist via Homebrew
         run: |
           brew install tuist
