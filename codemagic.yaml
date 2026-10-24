@@ -5,51 +5,50 @@ workflows:
     environment:
       xcode: latest
     scripts:
-      - name: Extract and Find Project
+      - name: Check Files and Extract
         script: |
+          echo "=== ALL FILES IN REPOSITORY ==="
+          ls -la
+          
           if [ -f "LeanIOS.zip" ]; then
-            unzip -q LeanIOS.zip -d extracted_files
+            echo "Extracting LeanIOS.zip..."
+            unzip -q LeanIOS.zip -d .
+          else
+            echo "LeanIOS.zip not found, checking existing folders..."
           fi
-          # گەڕانی گشتگیر بە دوای فۆڵدەری پڕۆژەدا
-          find . -name "*.xcodeproj" -o -name "*.xcworkspace"
+          
+          echo "=== FILES AFTER EXTRACTION ==="
+          find . -maxdepth 3
+          
       - name: Build and Package App
         script: |
-          # دۆزینەوەی شوێنی ڕاستەقینەی پڕۆژەکە یان وۆرکسپەیسەکە
-          WORKSPACE_PATH=$(find . -name "*.xcworkspace" | head -n 1)
-          PROJECT_PATH=$(find . -name "*.xcodeproj" | head -n 1)
+          # دۆزینەوەی ڕاستەوخۆی پڕۆژە یان وۆرکسپەیس
+          WORKSPACE_FILE=$(find . -name "*.xcworkspace" | head -n 1)
+          PROJECT_FILE=$(find . -name "*.xcodeproj" | head -n 1)
           
-          if [ -n "$WORKSPACE_PATH" ]; then
-            TARGET_DIR=$(dirname "$WORKSPACE_PATH")
+          if [ -n "$WORKSPACE_FILE" ]; then
+            TARGET_DIR=$(dirname "$WORKSPACE_FILE")
             cd "$TARGET_DIR"
-            WORKSPACE_NAME=$(basename "$WORKSPACE_PATH")
-            echo "Building workspace: $WORKSPACE_NAME in $TARGET_DIR"
-            
-            xcodebuild -workspace "$WORKSPACE_NAME" -scheme Median -sdk iphoneos -configuration Release archive -archivePath build/MedianIOS.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+            echo "Building workspace in: $TARGET_DIR"
+            xcodebuild -workspace "$(basename "$WORKSPACE_FILE")" -scheme Median -sdk iphoneos -configuration Release archive -archivePath build/MedianIOS.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
             
             mkdir -p ../../build/ios/ipa
-            if [ -d "build/MedianIOS.xcarchive/Products/Applications/" ]; then
-              cd build/MedianIOS.xcarchive/Products/Applications/
-              zip -r ../../../../build/ios/ipa/FlixVision.zip .
-            fi
-          elif [ -n "$PROJECT_PATH" ]; then
-            TARGET_DIR=$(dirname "$PROJECT_PATH")
+            cd build/MedianIOS.xcarchive/Products/Applications/
+            zip -r ../../../../build/ios/ipa/FlixVision.zip .
+          elif [ -n "$PROJECT_FILE" ]; then
+            TARGET_DIR=$(dirname "$PROJECT_FILE")
             cd "$TARGET_DIR"
-            PROJECT_NAME=$(basename "$PROJECT_PATH")
-            echo "Building project: $PROJECT_NAME in $TARGET_DIR"
-            
-            xcodebuild -project "$PROJECT_NAME" -scheme Median -sdk iphoneos -configuration Release archive -archivePath build/MedianIOS.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+            echo "Building project in: $TARGET_DIR"
+            xcodebuild -project "$(basename "$PROJECT_FILE")" -scheme Median -sdk iphoneos -configuration Release archive -archivePath build/MedianIOS.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
             
             mkdir -p ../../build/ios/ipa
-            if [ -d "build/MedianIOS.xcarchive/Products/Applications/" ]; then
-              cd build/MedianIOS.xcarchive/Products/Applications/
-              zip -r ../../../../build/ios/ipa/FlixVision.zip .
-            fi
+            cd build/MedianIOS.xcarchive/Products/Applications/
+            zip -r ../../../../build/ios/ipa/FlixVision.zip .
           else
-            echo "Error: Neither xcworkspace nor xcodeproj found anywhere!"
+            echo "CRITICAL ERROR: No project files found at all."
             exit 1
           fi
     artifacts:
-      - build/ios/ipa/*.ipa
       - build/ios/ipa/*.zip
       - "**/build/ios/ipa/*.zip"
       - "**/FlixVision.zip"
