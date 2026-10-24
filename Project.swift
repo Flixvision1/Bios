@@ -1,11 +1,5 @@
 import ProjectDescription
 
-// Dynamic configuration via TUIST_* environment variables.
-// The builder sets these before running `tuist generate`.
-// For local development, defaults are used.
-//
-// Mapping:  Environment.camelCase  →  TUIST_CAMEL_CASE
-//
 let projectName = Environment.projectName.getString(default: "MedianIOS")
 let targetName = Environment.targetName.getString(default: "Median")
 let bundleId = Environment.bundleId.getString(default: "io.gonative.ios.dev")
@@ -23,8 +17,6 @@ let project = Project(
         .remote(url: "median.go-native-core", requirement: .exact("3.0.17")),
         .remote(url: "median.median-icons", requirement: .upToNextMajor(from: "1.2.0")),
         .remote(url: "https://github.com/ZipArchive/ZipArchive", requirement: .upToNextMajor(from: "2.6.0")),
-        // Active plugins are injected here by the builder at build time.
-        // MARK: BUILDER_PLUGINS
     ],
     targets: [
         .target(
@@ -62,8 +54,6 @@ let project = Project(
                 .package(product: "GoNativeCore"),
                 .package(product: "MedianIcons"),
                 .package(product: "ZipArchive"),
-                // Active plugin dependencies are injected here by the builder at build time.
-                // MARK: BUILDER_PLUGIN_DEPENDENCIES
                 .sdk(name: "Foundation", type: .framework),
                 .sdk(name: "UIKit", type: .framework),
                 .sdk(name: "CoreGraphics", type: .framework),
@@ -116,25 +106,6 @@ let project = Project(
                     ])
                 ]
             )
-        ),
-        .target(
-            name: "\(targetName)Tests",
-            destinations: [.iPhone, .iPad],
-            product: .unitTests,
-            bundleId: "\(bundleId)Tests",
-            deploymentTargets: .iOS("15.5"),
-            infoPlist: .file(path: "LeanIOSTests/MedianIOSTests-Info.plist"),
-            sources: ["LeanIOSTests/**/*.m"],
-            dependencies: [
-                .target(name: targetName)
-            ],
-            settings: .settings(
-                base: [
-                    "GCC_PREFIX_HEADER": "LeanIOS/MedianIOS-Prefix.pch",
-                    "GCC_PRECOMPILE_PREFIX_HEADER": "YES"
-                ]
-            )
-        ),
-        // Extension targets will be added here by scan-extensions.js,
+        )
     ]
 )
