@@ -24,20 +24,16 @@ jobs:
           if [ -f "FlixVision.xcodeproj.zip" ]; then unzip -q FlixVision.xcodeproj.zip; fi
           if [ -f "FlixVision.xcworkspace.zip" ]; then unzip -q FlixVision.xcworkspace.zip; fi
 
-      - name: Install Tuist & Resolve Dependencies
+      - name: Install Tuist & Generate
         run: |
           export HOMEBREW_NO_AUTO_UPDATE=1
           brew install tuist
-          tuist install
-
-      - name: Generate Project
-        run: |
-          tuist generate --no-open
+          tuist generate --no-open --no-resolve-dependencies
 
       - name: Build Archive
         run: |
           mkdir -p build/ios/ipa
-          xcodebuild -workspace MedianIOS.xcworkspace -scheme MedianIOS -sdk iphoneos -configuration Release archive -archivePath build/MedianIOS.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+          xcodebuild -workspace MedianIOS.xcworkspace -scheme MedianIOS -sdk iphoneos -configuration Release archive -archivePath build/MedianIOS.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO -skipPackagePluginValidation
 
       - name: Zip IPA
         run: |
