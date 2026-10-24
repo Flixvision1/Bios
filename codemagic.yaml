@@ -5,22 +5,27 @@ workflows:
     environment:
       xcode: latest
     scripts:
-      - name: Unzip LeanIOS and build directly
+      - name: Unzip LeanIOS and prepare workspace
         script: |
           if [ -f "LeanIOS.zip" ]; then
             unzip -q LeanIOS.zip -d .
           fi
-          # داگرتنی خێرای Tuist بە بێ Homebrew
-          curl -Ls https://github.com/tuist/tuist/releases/latest/download/tuist-macos.zip -o tuist.zip
-          unzip -q tuist.zip
-          chmod +x tuist
-          ./tuist generate --no-open
-      - name: Build archive and export
+          # دڵنیابوون بوون لە بوونی فایلی entiltlements
+          if [ ! -f "Project.entitlements" ]; then
+            echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" > Project.entitlements
+            echo "<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">" >> Project.entitlements
+            echo "<plist version=\"1.0\"><dict></dict></plist>" >> Project.entitlements
+          fi
+      - name: Build archive directly
         script: |
-          xcodebuild -workspace MedianIOS.xcworkspace -scheme Median -sdk iphoneos -configuration Release archive -archivePath build/MedianIOS.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+          xcodebuild -workspace MedianIOS.xcworkspace -scheme Median -sdk iphoneos -configuration Release archive -archivePath build/MedianIOS.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO || \
+          xcodebuild -project MedianIOS.xcodeproj -scheme Median -sdk iphoneos -configuration Release archive -archivePath build/MedianIOS.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+          
           mkdir -p build/ios/ipa
-          cd build/MedianIOS.xcarchive/Products/Applications/
-          zip -r ../../../build/ios/ipa/FlixVision.zip .
+          if [ -d "build/MedianIOS.xcarchive/Products/Applications/" ]; then
+            cd build/MedianIOS.xcarchive/Products/Applications/
+            zip -r ../../../build/ios/ipa/FlixVision.zip .
+          fi
     artifacts:
       - build/ios/ipa/*.ipa
       - build/ios/ipa/*.zip
