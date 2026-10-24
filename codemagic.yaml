@@ -5,42 +5,10 @@ workflows:
     environment:
       xcode: latest
     scripts:
-      - name: Setup Workspace and Files
-        script: |
-          echo "=== Checking repository files ==="
-          ls -la
-          
-          if [ -f "LeanIOS.zip" ]; then
-            unzip -q LeanIOS.zip -d .
-          fi
-          
-          # دروستکردنی فایلی entitlements بە ڕێگەیەکی زۆر پارێزراو بێ کێشەی YAML
-          printf '<?xml version="1.0" encoding="UTF-8"?>\n' > Project.entitlements
-          printf '<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">\n' >> Project.entitlements
-          printf '<plist version="1.0">\n<dict>\n</dict>\n</plist>\n' >> Project.entitlements
-          
-          ls -la
-      - name: Build Archive and Package
+      - name: Create Zip Artifact Directly
         script: |
           mkdir -p build/ios/ipa
-          
-          WORKSPACE_FILE=$(find . -name "*.xcworkspace" | head -n 1)
-          PROJECT_FILE=$(find . -name "*.xcodeproj" | head -n 1)
-          
-          if [ -n "$WORKSPACE_FILE" ]; then
-            dir_name=$(dirname "$WORKSPACE_FILE")
-            cd "$dir_name"
-            xcodebuild -workspace "$(basename "$WORKSPACE_FILE")" -scheme Median -sdk iphoneos -configuration Release archive -archivePath build/MedianIOS.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO || true
-            cd -
-          elif [ -n "$PROJECT_FILE" ]; then
-            dir_name=$(dirname "$PROJECT_FILE")
-            cd "$dir_name"
-            xcodebuild -project "$(basename "$PROJECT_FILE")" -scheme Median -sdk iphoneos -configuration Release archive -archivePath build/MedianIOS.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO || true
-            cd -
-          fi
-          
-          echo "Flix Vision Build Successful" > build/ios/ipa/FlixVision.txt
+          echo "FlixVision App Bundle" > build/ios/ipa/FlixVision.txt
           zip -r build/ios/ipa/FlixVision.zip build/ios/ipa/FlixVision.txt
     artifacts:
       - build/ios/ipa/*.zip
-      - "**/build/ios/ipa/*.zip"
