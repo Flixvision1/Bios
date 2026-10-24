@@ -14,8 +14,8 @@ let project = Project(
         developmentRegion: "en"
     ),
     packages: [
-        .remote(url: "median.go-native-core", requirement: .exact("3.0.17")),
-        .remote(url: "median.median-icons", requirement: .upToNextMajor(from: "1.2.0")),
+        .remote(url: "https://github.com/gonativeio/gonative-core-ios", requirement: .exact("3.0.17")),
+        .remote(url: "https://github.com/gonativeio/gonative-icons-ios", requirement: .upToNextMajor(from: "1.2.0")),
         .remote(url: "https://github.com/ZipArchive/ZipArchive", requirement: .upToNextMajor(from: "2.6.0")),
     ],
     targets: [
