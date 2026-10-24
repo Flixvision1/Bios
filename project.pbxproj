@@ -1,0 +1,1170 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		026480F8089218FD026BDC4B /* LEANUrlInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = C3284C961CAEB5611551E28C /* LEANUrlInspector.m */; };
+		058201F8CA6A42D408D602E9 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 93F5FD5CD5BB41CDA5E4B05C /* PrivacyInfo.xcprivacy */; };
+		05D39C1F495FC052EE93B9AF /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA538FEF8E1C19BD85B31C7 /* AppTrackingTransparency.framework */; };
+		06A2901EA6BCAFDBF3DA0015 /* LEANAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA39A629BCB7C24B3AACE79A /* LEANAppDelegate.m */; };
+		0A4328478078B720472DC861 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241C5EB95C45BED7DFC1E428 /* Security.framework */; };
+		11BFA3F34C010DC99F43C0FC /* MenuGroupIcon.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AF2C6F84E43044846306A40 /* MenuGroupIcon.xib */; };
+		13C6E47698BAAD9988607133 /* NSURL+LEANUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD4BB046924754DFF2CFB6 /* NSURL+LEANUtilities.m */; };
+		150D6299524F404776B05A77 /* appConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 772E74DAE7504A5F2FB29154 /* appConfig.json */; };
+		159A9A4A9D4B081AC220732D /* UIView+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C04284219654F8CDA37BAECA /* UIView+REFrostedViewController.m */; };
+		15A95E505F2A9635FAABEF44 /* LEANJsCustomCodeExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3626E3D81B47FFB6DA1D6CFE /* LEANJsCustomCodeExecutor.m */; };
+		169C6183C41F5FD6AE9D6BC8 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CAB6E0953D2820C3BA5DA31 /* CoreText.framework */; };
+		17AD2A6B33F383451A4108D5 /* TuistFonts+FlixVision.swift in Sources */ = {isa = PBXBuildFile; fileRef = A124051CB620E5DBD72606AE /* TuistFonts+FlixVision.swift */; };
+		1975FCA3E153C7F5624A96F1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 969E31C8CC24D3F36090699B /* Localizable.strings */; };
+		1A026611901D2BAE9E788F90 /* LEANSceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7F0444EF9BE55A6F3EE93B /* LEANSceneDelegate.m */; };
+		1EEEA7EE54909E3B2D7ACC44 /* LEANTabManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5053CB7822B7FF6CA29F776 /* LEANTabManager.m */; };
+		21752FF0DEC18A3735262D48 /* WindowsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3601426C0FA4DF1129204B84 /* WindowsController.swift */; };
+		252BCD6B46C2E46A8BF36044 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CC63D59A515BBB193A271E5 /* QuartzCore.framework */; };
+		25AE9178BD34CEC7183CBB48 /* LEANLaunchScreenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4A350FC8AF448ADE24505F /* LEANLaunchScreenManager.m */; };
+		27F71972052ED23B09F5D40D /* LEANWindowsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D693CEF48A3F3835583C8027 /* LEANWindowsManager.m */; };
+		29BC15C6C078E4B0ADD0EE24 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F25FCB58D45640985E99C0E7 /* CoreGraphics.framework */; };
+		2B3B21EA59756B20F8C0EE54 /* LeanIOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 29324B0DD6467700FC8ED58F /* LeanIOSTests.m */; };
+		2C026D9BC001E7D70A40C3AE /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94180EDE755612BABE2EC4C5 /* UIApplication+Extensions.swift */; };
+		31CBBF7413FADFAED5BCDA21 /* customCSS.css in Resources */ = {isa = PBXBuildFile; fileRef = EA875EEFC8F748398450AB7D /* customCSS.css */; };
+		35747BDE4BEF41577AF157F5 /* custom-icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9D1C0782DB9F9C5FBB6296D /* custom-icons.ttf */; };
+		381BEFCD55DE8FB6C1DF6610 /* LaunchScreenNoNav.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8076B12455F83EEA169E08D6 /* LaunchScreenNoNav.storyboard */; };
+		3981C5B18569B8F8CE8ACB42 /* LEANUrlCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F2525282AAECA0E346B6669A /* LEANUrlCache.m */; };
+		39BCF855EE6324CB9F2124DD /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286C62D8EA36EE9436370443 /* Social.framework */; };
+		3F3C8840CF29915AEC6416F0 /* LEANPDFManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A0AE40E474EDA8F26DA56D /* LEANPDFManager.m */; };
+		40A08936357D126EFD457B31 /* GNFileWriterSharer.m in Sources */ = {isa = PBXBuildFile; fileRef = D282A5BE5164D7D474D8E2AE /* GNFileWriterSharer.m */; };
+		42023DAE4194E04454A9AA9D /* AppIcon in Resources */ = {isa = PBXBuildFile; fileRef = EE9EEC9DEB27BD7D1BB958EA /* AppIcon */; };
+		420BC7CC919BB53B4CE4E00A /* GNCustomHeaders.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBD0B81E5B0452D288F48C5 /* GNCustomHeaders.m */; };
+		426CCFE4964B4C6F2D5BCBCB /* MedianEventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C1190D5DA035C81472D1668B /* MedianEventsManager.m */; };
+		444B88E77FE4DDCD3052C059 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CF3AE1052D162443398D274 /* Images.xcassets */; };
+		458930E51DE640BDA7424D01 /* LEANMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E187D472CF499F5BE2F004F /* LEANMenuViewController.m */; };
+		45902307CE0C36960644F275 /* localCache.zip in Resources */ = {isa = PBXBuildFile; fileRef = 77DD7B2ED87312087BAA19C4 /* localCache.zip */; };
+		468DD4449DF1B0C9FA133D5D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F5FF15C525DE68DBD3E05D /* MessageUI.framework */; };
+		469814982BC4A26B69B7B7D5 /* UIViewController+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B2C4C60DDAF6A1645DDCF0 /* UIViewController+REFrostedViewController.m */; };
+		494A73E6817491D594DBFB98 /* custom-icons.json in Resources */ = {isa = PBXBuildFile; fileRef = E65BB2905E2F2A329EFBAF5D /* custom-icons.json */; };
+		4E99B6234BAE4397ED906CF2 /* REFrostedContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5D1110E003D812319AAC79 /* REFrostedContainerViewController.m */; };
+		4F4E4D624D51B2B1D9F55FCE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20A4D7D30ECAD6A4DD668CA8 /* UIKit.framework */; };
+		4FB4B8D786373854C3CBBC27 /* LEANProfilePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E94D1885F3B1CCA66AF2BA58 /* LEANProfilePicker.m */; };
+		50397E32002B59413191F393 /* GoNativeCore in Frameworks */ = {isa = PBXBuildFile; productRef = BAF68D1E5916C3BD597FA5F5 /* GoNativeCore */; };
+		51B09E04EC1255458CE10EB7 /* LEANUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BEBC616F1C833AFAD4713BCF /* LEANUtilities.m */; };
+		55CE31D80C506526CB0CA500 /* CustomMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28329160AF98FD55EF5B6 /* CustomMenu.swift */; };
+		5DC87A95BFB767351B1DCCE2 /* LEANLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2C96C09BE45BC6042E7030 /* LEANLoginManager.m */; };
+		61279CBB79537844F51DF13B /* LEANWebViewIntercept.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E01E2BEDD376F63D8FA49B /* LEANWebViewIntercept.m */; };
+		6772E1245B24D9FA13BE5F96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A0C43CB4461B82B08EE6DF /* Foundation.framework */; };
+		678EC4E1F7B5CF464ABF12A7 /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753E2D7F18C80F0FB7E6EBBA /* MediaAccessibility.framework */; };
+		68DC084A106BDA6DD68F1A68 /* LEANNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AADCF714A3A47A84D5DB8AB /* LEANNavigationController.m */; };
+		6AF8354AAEE6D4E9A3604572 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = C558E06A3CD99C5D57995E4C /* GTMNSString+HTML.m */; };
+		6E2C9713046C01551740748E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF5225D3355E2FFDA8B14D26 /* Settings.bundle */; };
+		6F010D9A2F1281AF74220F7A /* LEANWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FDA15A784C9B1EDDE2907B3 /* LEANWebViewController.m */; };
+		77C10FBA0BC282D7F7A6B593 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E4DE8E65E94D6A1E59E974 /* main.m */; };
+		796C25E14DE7102DCED8B6A8 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D7ACDE8BE2E873BB7A7F32 /* Reachability.m */; };
+		7A19FB520E9B5D7435850D93 /* ZipArchive in Frameworks */ = {isa = PBXBuildFile; productRef = FF9DF5564416195B8C9D2447 /* ZipArchive */; };
+		7CDC0A815AB9502A78D234B2 /* LEANLoadingSpinnerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A276CFFCCA0777480FC51C /* LEANLoadingSpinnerManager.m */; };
+		7DC780944EA590EF0EF3B139 /* WebViewViewportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EE156295127A3617542C0C /* WebViewViewportManager.swift */; };
+		7E6F7310D874D9BC95156DA6 /* LEANRegexRulesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F92428CEC891CD82FC156F /* LEANRegexRulesManager.m */; };
+		7FD5A133BC74C4A11E16F892 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F0CED7B85E80569CEF2529 /* CoreLocation.framework */; };
+		824EC70725B0EE0431B75C1B /* iosHeaderImage in Resources */ = {isa = PBXBuildFile; fileRef = 49F4239795C511F48134635E /* iosHeaderImage */; };
+		88D181CDD0D8B349782EFD99 /* LEANKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA96EACBC10588070486FAE /* LEANKeyboardManager.m */; };
+		8B4FD6C1A24EFDF2C1A205AE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 957A2434AD3E2FF264CA5D77 /* AudioToolbox.framework */; };
+		8B8B505C43F7A8E541E881B2 /* REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E136859630A6ABA9A8BB6E94 /* REFrostedViewController.m */; };
+		8C2574B78B23DC20D8B0C6BF /* iosCustomJS.js in Resources */ = {isa = PBXBuildFile; fileRef = C6A6503DC46B6998B5FB52E0 /* iosCustomJS.js */; };
+		92CADE6BE5409E934B0CDE46 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE271F8DDDA472450096DA3 /* CFNetwork.framework */; };
+		930FCD685CDBE67B41367444 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 358A48DC8690E31D6C3D7FED /* InfoPlist.strings */; };
+		93EF5AAB85BAA4A72573CCA1 /* GNJSBridgeInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 16864F9F314D6DDCEEAC1133 /* GNJSBridgeInterface.m */; };
+		94EDB20982F39123D031E903 /* iosCustomCSS.css in Resources */ = {isa = PBXBuildFile; fileRef = 4FE708CB1E34928ADA92D50C /* iosCustomCSS.css */; };
+		95DC30837860D2A5EF582E36 /* TuistStrings+FlixVision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C333BFAE5D974A94A90962 /* TuistStrings+FlixVision.swift */; };
+		9655EFFC6E57AD308278FE76 /* LiquidTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61CE031D7BCAEF374F37356 /* LiquidTitleView.swift */; };
+		979D01DEE04945BB40C08389 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F4654F7C9E2DC9CBE56482F /* LaunchScreen.storyboard */; };
+		985629F91B647DEB99D53543 /* GNConfigPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 561121F48B4A0719B233A2E8 /* GNConfigPreferences.m */; };
+		996AB7BCF77B36DAB009BB1A /* LEANConfigUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = D6984E72344509C84963C8C4 /* LEANConfigUpdater.m */; };
+		9E00FBB127B4D72FB621C3AA /* LEANActionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 98434CB09D81BC64741786AC /* LEANActionManager.m */; };
+		A20D670E1FE5971E2ED41DB4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BAA2C7F745A72D6A2118B91 /* SystemConfiguration.framework */; };
+		A4D29CA84198C636B47DEC59 /* MedianIcons in Frameworks */ = {isa = PBXBuildFile; productRef = 0B7BE17488B6C8953FCAFDB9 /* MedianIcons */; };
+		AE234DB0BB15A71BC95BE2FE /* LEANWindowOverrideHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3445912FADEE4A6088E58B25 /* LEANWindowOverrideHandler.m */; };
+		B253CEECD72446A748887558 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BE81EEE3B3CCB08B8E9B25 /* Assets.xcassets */; };
+		B687398C3B6E188775A6CB0B /* LEANIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E3A9EFC636FBA6A0B0BDD /* LEANIcons.swift */; };
+		B775C0CEC27CD4B8B2985FCF /* SidebarHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D4E8290E48EFC1424722E0 /* SidebarHeaderView.xib */; };
+		B791C9A23A81A100FD4DAFE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35118454FF33FDE97536F9AD /* Main.storyboard */; };
+		B8546B5A2C7F810BDC793436 /* customJS.js in Resources */ = {isa = PBXBuildFile; fileRef = DD20476628D355C6F15A87F6 /* customJS.js */; };
+		BBCA8A0717652E528F68A11C /* GNLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 049186012466977BE6A1E4EB /* GNLogManager.m */; };
+		C40B2A0B06543F11BB48D8AA /* offline.html in Resources */ = {isa = PBXBuildFile; fileRef = D88F1D7F18D1F13BD635E6DE /* offline.html */; };
+		C74D5F57A22EEFAFD9D283BB /* LEANWebViewPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6098EB8D4E530062F851074B /* LEANWebViewPool.m */; };
+		C7775B675B5E6985E156DBD1 /* TuistAssets+FlixVision.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4E6B56C1C5C32B2F4B3749 /* TuistAssets+FlixVision.swift */; };
+		CCC742579DB9F1CBB60E2B34 /* LaunchScreenNav.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F573C97F6CE92683D6241150 /* LaunchScreenNav.storyboard */; };
+		CE3C740EA4D45409FF8DEB2A /* GNSwiftUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0D52BBFCC510CB7AB54EFC /* GNSwiftUtilities.swift */; };
+		CFFC7662DC2DD52F0DD66CF4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20733BD93A5B5EC0CC8B8C72 /* GoogleService-Info.plist */; };
+		DD267FD664AD30081F61487D /* GoNativeJSBridgeLibrary.js in Resources */ = {isa = PBXBuildFile; fileRef = D4F4837259FAAE53BD2B6E78 /* GoNativeJSBridgeLibrary.js */; };
+		DDE533A6879BE487F8D3C1BD /* UIImage+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CED11238D800527831DA43D /* UIImage+REFrostedViewController.m */; };
+		E24858F5DB5CDA434EE7E907 /* MenuChildIcon.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CA34548DD14EBA4DAAB5AF5 /* MenuChildIcon.xib */; };
+		E3F5B83DAC0D7B2A9A4A45F6 /* MenuChildNoIcon.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5C66DF84542D6EE11E4CCC5 /* MenuChildNoIcon.xib */; };
+		E4B56136ADF9C030F55B8F58 /* ContextMenuHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF07550C8FC0C32BF14A2C9 /* ContextMenuHandler.swift */; };
+		E66CFF42460E62838E8FEFB4 /* appbeep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 980491C3F29EF688DF16DCE2 /* appbeep.wav */; };
+		E6C322BA0CC2B05399B81F1D /* LEANDocumentSharer.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B18FAC768B31799F67EBD9 /* LEANDocumentSharer.m */; };
+		E7028640C9C6DFA09F56C4DF /* GNRegistrationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5E337E5B5234E5CF800EB2 /* GNRegistrationManager.m */; };
+		EAB28C247A7582AFED2FEC21 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365589BB7531D825EC8227AF /* Accounts.framework */; };
+		EC25105BB433CD500940EA2A /* GNBackgroundAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F597007835CC4D08BE33BCF /* GNBackgroundAudio.m */; };
+		F0E9F6A81302710CED730AF3 /* LEANInstallation.m in Sources */ = {isa = PBXBuildFile; fileRef = F510788E257941F596C1C567 /* LEANInstallation.m */; };
+		F1938C3F9C158C65D83AA3DB /* TuistPlists+FlixVision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48131EA43E578ADD4D33A1ED /* TuistPlists+FlixVision.swift */; };
+		F4921445D776517A5A7DF253 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = DA072182F7B97166A60CBDB0 /* RECommonFunctions.m */; };
+		F6060EF3B99FB49C25C5D9A9 /* LEANRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3102666271F96AF6C27F203 /* LEANRootViewController.m */; };
+		F8D5DB0BA111FD31441C8258 /* TuistBundle+FlixVision.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96D0A4B58F3DBF3DEEA733B /* TuistBundle+FlixVision.swift */; };
+		F9B9280EB48EB48631F903C3 /* BlobDownloader.js in Resources */ = {isa = PBXBuildFile; fileRef = A40D192C4E809C037815409E /* BlobDownloader.js */; };
+		F9C91029A10A17ABD1EEF819 /* LEANToolbarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C891000BDFD16A422F75AD /* LEANToolbarManager.m */; };
+		FB27E365ECBA238EB415C685 /* MenuGroupNoIcon.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508AB2208AE88E8CDB8FBBE6 /* MenuGroupNoIcon.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9535EA8B1968B99EA6A4593 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16B12D6E9CD9B79F2B4AC47A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7AB4B77EED9DF4887E4B4FE6;
+			remoteInfo = FlixVision;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7B5BD4CA5AA11BA98C21292A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		983AF581D732907A68A64E9E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		02E4DE8E65E94D6A1E59E974 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		049186012466977BE6A1E4EB /* GNLogManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GNLogManager.m; sourceTree = "<group>"; };
+		06A844718607A85FA23BCFDE /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
+		082155E49B519329B13745DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0A2C96C09BE45BC6042E7030 /* LEANLoginManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANLoginManager.m; sourceTree = "<group>"; };
+		0C05937AE7C433790ECF5D4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0CAB6E0953D2820C3BA5DA31 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		1099C504DDB03E8DB4EE48B7 /* et */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = et; path = et.lproj/Localizable.strings; sourceTree = "<group>"; };
+		119E3A9EFC636FBA6A0B0BDD /* LEANIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEANIcons.swift; sourceTree = "<group>"; };
+		16864F9F314D6DDCEEAC1133 /* GNJSBridgeInterface.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GNJSBridgeInterface.m; sourceTree = "<group>"; };
+		17B2C4C60DDAF6A1645DDCF0 /* UIViewController+REFrostedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+REFrostedViewController.m"; sourceTree = "<group>"; };
+		19DB49C69A1406030B75697B /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1CF3AE1052D162443398D274 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1F4A350FC8AF448ADE24505F /* LEANLaunchScreenManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANLaunchScreenManager.m; sourceTree = "<group>"; };
+		20733BD93A5B5EC0CC8B8C72 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2085B3516BCF3EB6E5BBF2AC /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Localizable.strings; sourceTree = "<group>"; };
+		20A276CFFCCA0777480FC51C /* LEANLoadingSpinnerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANLoadingSpinnerManager.m; sourceTree = "<group>"; };
+		20A4D7D30ECAD6A4DD668CA8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		21F5FF15C525DE68DBD3E05D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
+		241C5EB95C45BED7DFC1E428 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		274280E42974FAC4DDCA58C4 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		286C62D8EA36EE9436370443 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Social.framework; sourceTree = DEVELOPER_DIR; };
+		29324B0DD6467700FC8ED58F /* LeanIOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanIOSTests.m; sourceTree = "<group>"; };
+		2E187D472CF499F5BE2F004F /* LEANMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANMenuViewController.m; sourceTree = "<group>"; };
+		2FDA15A784C9B1EDDE2907B3 /* LEANWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANWebViewController.m; sourceTree = "<group>"; };
+		3445912FADEE4A6088E58B25 /* LEANWindowOverrideHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANWindowOverrideHandler.m; sourceTree = "<group>"; };
+		3520A8EF9C5222BFF8324ECD /* Project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Project.entitlements; sourceTree = "<group>"; };
+		35A0C43CB4461B82B08EE6DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3601426C0FA4DF1129204B84 /* WindowsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowsController.swift; sourceTree = "<group>"; };
+		3626E3D81B47FFB6DA1D6CFE /* LEANJsCustomCodeExecutor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANJsCustomCodeExecutor.m; sourceTree = "<group>"; };
+		365589BB7531D825EC8227AF /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Accounts.framework; sourceTree = DEVELOPER_DIR; };
+		3CA34548DD14EBA4DAAB5AF5 /* MenuChildIcon.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuChildIcon.xib; sourceTree = "<group>"; };
+		41677D91E6D6A49E90ECADF1 /* lt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lt; path = lt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		44D4E8290E48EFC1424722E0 /* SidebarHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SidebarHeaderView.xib; sourceTree = "<group>"; };
+		4711FEFFCF3F9299E1465144 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		48131EA43E578ADD4D33A1ED /* TuistPlists+FlixVision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistPlists+FlixVision.swift"; sourceTree = "<group>"; };
+		49F4239795C511F48134635E /* iosHeaderImage */ = {isa = PBXFileReference; path = iosHeaderImage; sourceTree = "<group>"; };
+		4CE7B4DA0242FD3C65213EF8 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4F2546A2D7BBF688408FFABA /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4FE708CB1E34928ADA92D50C /* iosCustomCSS.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = iosCustomCSS.css; sourceTree = "<group>"; };
+		508AB2208AE88E8CDB8FBBE6 /* MenuGroupNoIcon.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuGroupNoIcon.xib; sourceTree = "<group>"; };
+		50E01E2BEDD376F63D8FA49B /* LEANWebViewIntercept.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANWebViewIntercept.m; sourceTree = "<group>"; };
+		561121F48B4A0719B233A2E8 /* GNConfigPreferences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GNConfigPreferences.m; sourceTree = "<group>"; };
+		58F28329160AF98FD55EF5B6 /* CustomMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenu.swift; sourceTree = "<group>"; };
+		6098EB8D4E530062F851074B /* LEANWebViewPool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANWebViewPool.m; sourceTree = "<group>"; };
+		60CE75CE75DA07E07FE86142 /* MedianIOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MedianIOSTests-Info.plist"; sourceTree = "<group>"; };
+		61C333BFAE5D974A94A90962 /* TuistStrings+FlixVision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistStrings+FlixVision.swift"; sourceTree = "<group>"; };
+		61F92428CEC891CD82FC156F /* LEANRegexRulesManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANRegexRulesManager.m; sourceTree = "<group>"; };
+		66E41B2D1ECC419B6764CAC7 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6F4654F7C9E2DC9CBE56482F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6FBD0B81E5B0452D288F48C5 /* GNCustomHeaders.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GNCustomHeaders.m; sourceTree = "<group>"; };
+		7383A964702AF42099B94525 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
+		73B18FAC768B31799F67EBD9 /* LEANDocumentSharer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANDocumentSharer.m; sourceTree = "<group>"; };
+		753E2D7F18C80F0FB7E6EBBA /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/MediaAccessibility.framework; sourceTree = DEVELOPER_DIR; };
+		75C891000BDFD16A422F75AD /* LEANToolbarManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANToolbarManager.m; sourceTree = "<group>"; };
+		772E74DAE7504A5F2FB29154 /* appConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = appConfig.json; sourceTree = "<group>"; };
+		77DB9E60C82A3EF3C2F603F1 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		77DD7B2ED87312087BAA19C4 /* localCache.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = localCache.zip; sourceTree = "<group>"; };
+		789C18DE8BE8BA2C775AF730 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7CC63D59A515BBB193A271E5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		7CED11238D800527831DA43D /* UIImage+REFrostedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+REFrostedViewController.m"; sourceTree = "<group>"; };
+		7EE14796DB17EA3C6996F46B /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8076B12455F83EEA169E08D6 /* LaunchScreenNoNav.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreenNoNav.storyboard; sourceTree = "<group>"; };
+		80D7ACDE8BE2E873BB7A7F32 /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		84FD4BB046924754DFF2CFB6 /* NSURL+LEANUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+LEANUtilities.m"; sourceTree = "<group>"; };
+		88BE81EEE3B3CCB08B8E9B25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		93CC8A63EFEF89791416CAE6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		93F5FD5CD5BB41CDA5E4B05C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		94180EDE755612BABE2EC4C5 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
+		957A2434AD3E2FF264CA5D77 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		980491C3F29EF688DF16DCE2 /* appbeep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = appbeep.wav; sourceTree = "<group>"; };
+		98434CB09D81BC64741786AC /* LEANActionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANActionManager.m; sourceTree = "<group>"; };
+		9A5D1110E003D812319AAC79 /* REFrostedContainerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REFrostedContainerViewController.m; sourceTree = "<group>"; };
+		9AADCF714A3A47A84D5DB8AB /* LEANNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANNavigationController.m; sourceTree = "<group>"; };
+		9AF2C6F84E43044846306A40 /* MenuGroupIcon.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuGroupIcon.xib; sourceTree = "<group>"; };
+		9B0D52BBFCC510CB7AB54EFC /* GNSwiftUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNSwiftUtilities.swift; sourceTree = "<group>"; };
+		9BAA2C7F745A72D6A2118B91 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		9F3AC80CC12316A84326F4BF /* MedianIOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MedianIOS-Info.plist"; sourceTree = "<group>"; };
+		9F597007835CC4D08BE33BCF /* GNBackgroundAudio.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GNBackgroundAudio.m; sourceTree = "<group>"; };
+		A124051CB620E5DBD72606AE /* TuistFonts+FlixVision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistFonts+FlixVision.swift"; sourceTree = "<group>"; };
+		A1A6C780E619440D7EFC8E2E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A1F0CED7B85E80569CEF2529 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		A245AB5450C1CAD8DCEAEF3C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A40D192C4E809C037815409E /* BlobDownloader.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = BlobDownloader.js; sourceTree = "<group>"; };
+		A6BEBE2D17428951A8AF9423 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A96D0A4B58F3DBF3DEEA733B /* TuistBundle+FlixVision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+FlixVision.swift"; sourceTree = "<group>"; };
+		AA39A629BCB7C24B3AACE79A /* LEANAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANAppDelegate.m; sourceTree = "<group>"; };
+		AAF07550C8FC0C32BF14A2C9 /* ContextMenuHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMenuHandler.swift; sourceTree = "<group>"; };
+		ACA538FEF8E1C19BD85B31C7 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = DEVELOPER_DIR; };
+		ADA39DFC9AFAADBBE330763C /* FlixVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlixVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF5E337E5B5234E5CF800EB2 /* GNRegistrationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GNRegistrationManager.m; sourceTree = "<group>"; };
+		B081B402354B1D1B9DA4DB9E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B2BC79AF0224F7B941510F70 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B2EE156295127A3617542C0C /* WebViewViewportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewportManager.swift; sourceTree = "<group>"; };
+		B960012A1B28560EC4E176B0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BEBC616F1C833AFAD4713BCF /* LEANUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANUtilities.m; sourceTree = "<group>"; };
+		BF5225D3355E2FFDA8B14D26 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = wrapper.cfbundle; path = Settings.bundle; sourceTree = "<group>"; };
+		C04284219654F8CDA37BAECA /* UIView+REFrostedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+REFrostedViewController.m"; sourceTree = "<group>"; };
+		C1190D5DA035C81472D1668B /* MedianEventsManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MedianEventsManager.m; sourceTree = "<group>"; };
+		C3284C961CAEB5611551E28C /* LEANUrlInspector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANUrlInspector.m; sourceTree = "<group>"; };
+		C3ADB6EE2679C7387C703E67 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C5053CB7822B7FF6CA29F776 /* LEANTabManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANTabManager.m; sourceTree = "<group>"; };
+		C558E06A3CD99C5D57995E4C /* GTMNSString+HTML.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		C6A6503DC46B6998B5FB52E0 /* iosCustomJS.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = iosCustomJS.js; sourceTree = "<group>"; };
+		CADDB369A7841E8EFE3ADA1E /* FlixVisionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlixVisionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDE271F8DDDA472450096DA3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		D282A5BE5164D7D474D8E2AE /* GNFileWriterSharer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GNFileWriterSharer.m; sourceTree = "<group>"; };
+		D3CDFFD99118E407EA5571D0 /* gd */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = gd; path = gd.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D4F4837259FAAE53BD2B6E78 /* GoNativeJSBridgeLibrary.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = GoNativeJSBridgeLibrary.js; sourceTree = "<group>"; };
+		D693CEF48A3F3835583C8027 /* LEANWindowsManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANWindowsManager.m; sourceTree = "<group>"; };
+		D6984E72344509C84963C8C4 /* LEANConfigUpdater.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANConfigUpdater.m; sourceTree = "<group>"; };
+		D88F1D7F18D1F13BD635E6DE /* offline.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = offline.html; sourceTree = "<group>"; };
+		DA072182F7B97166A60CBDB0 /* RECommonFunctions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
+		DA4E6B56C1C5C32B2F4B3749 /* TuistAssets+FlixVision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+FlixVision.swift"; sourceTree = "<group>"; };
+		DC59F617779858BA6DB8E96F /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD20476628D355C6F15A87F6 /* customJS.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = customJS.js; sourceTree = "<group>"; };
+		DD8D2A327884606EC9B20AB3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E136859630A6ABA9A8BB6E94 /* REFrostedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REFrostedViewController.m; sourceTree = "<group>"; };
+		E15C3700B92E926C5A23BD43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E65BB2905E2F2A329EFBAF5D /* custom-icons.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "custom-icons.json"; sourceTree = "<group>"; };
+		E870564D92775270880AEDE4 /* fa */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fa; path = fa.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E94D1885F3B1CCA66AF2BA58 /* LEANProfilePicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANProfilePicker.m; sourceTree = "<group>"; };
+		EA875EEFC8F748398450AB7D /* customCSS.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = customCSS.css; sourceTree = "<group>"; };
+		EBDA5BA3EED63838F30A0131 /* nn-NO */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "nn-NO"; path = "nn-NO.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		EDA96EACBC10588070486FAE /* LEANKeyboardManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANKeyboardManager.m; sourceTree = "<group>"; };
+		EE9EEC9DEB27BD7D1BB958EA /* AppIcon */ = {isa = PBXFileReference; path = AppIcon; sourceTree = "<group>"; };
+		F2525282AAECA0E346B6669A /* LEANUrlCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANUrlCache.m; sourceTree = "<group>"; };
+		F25FCB58D45640985E99C0E7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		F3102666271F96AF6C27F203 /* LEANRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANRootViewController.m; sourceTree = "<group>"; };
+		F510788E257941F596C1C567 /* LEANInstallation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANInstallation.m; sourceTree = "<group>"; };
+		F573C97F6CE92683D6241150 /* LaunchScreenNav.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreenNav.storyboard; sourceTree = "<group>"; };
+		F5A0AE40E474EDA8F26DA56D /* LEANPDFManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANPDFManager.m; sourceTree = "<group>"; };
+		F5C66DF84542D6EE11E4CCC5 /* MenuChildNoIcon.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuChildNoIcon.xib; sourceTree = "<group>"; };
+		F61CE031D7BCAEF374F37356 /* LiquidTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiquidTitleView.swift; sourceTree = "<group>"; };
+		F9D1C0782DB9F9C5FBB6296D /* custom-icons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "custom-icons.ttf"; sourceTree = "<group>"; };
+		FA7F0444EF9BE55A6F3EE93B /* LEANSceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEANSceneDelegate.m; sourceTree = "<group>"; };
+		FEC3909F4102B35B3E0E1FB5 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FF9BB88DEB160CE4C09D34CC /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A1C8A2B37C3668FE1BC8BCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAB28C247A7582AFED2FEC21 /* Accounts.framework in Frameworks */,
+				05D39C1F495FC052EE93B9AF /* AppTrackingTransparency.framework in Frameworks */,
+				8B4FD6C1A24EFDF2C1A205AE /* AudioToolbox.framework in Frameworks */,
+				92CADE6BE5409E934B0CDE46 /* CFNetwork.framework in Frameworks */,
+				29BC15C6C078E4B0ADD0EE24 /* CoreGraphics.framework in Frameworks */,
+				7FD5A133BC74C4A11E16F892 /* CoreLocation.framework in Frameworks */,
+				169C6183C41F5FD6AE9D6BC8 /* CoreText.framework in Frameworks */,
+				6772E1245B24D9FA13BE5F96 /* Foundation.framework in Frameworks */,
+				678EC4E1F7B5CF464ABF12A7 /* MediaAccessibility.framework in Frameworks */,
+				468DD4449DF1B0C9FA133D5D /* MessageUI.framework in Frameworks */,
+				252BCD6B46C2E46A8BF36044 /* QuartzCore.framework in Frameworks */,
+				0A4328478078B720472DC861 /* Security.framework in Frameworks */,
+				39BCF855EE6324CB9F2124DD /* Social.framework in Frameworks */,
+				A20D670E1FE5971E2ED41DB4 /* SystemConfiguration.framework in Frameworks */,
+				4F4E4D624D51B2B1D9F55FCE /* UIKit.framework in Frameworks */,
+				50397E32002B59413191F393 /* GoNativeCore in Frameworks */,
+				A4D29CA84198C636B47DEC59 /* MedianIcons in Frameworks */,
+				7A19FB520E9B5D7435850D93 /* ZipArchive in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D06341BE02965723C965A681 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		45B977952F5BC8A9FCDDC238 /* REFrostedViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DA072182F7B97166A60CBDB0 /* RECommonFunctions.m */,
+				9A5D1110E003D812319AAC79 /* REFrostedContainerViewController.m */,
+				E136859630A6ABA9A8BB6E94 /* REFrostedViewController.m */,
+				7CED11238D800527831DA43D /* UIImage+REFrostedViewController.m */,
+				C04284219654F8CDA37BAECA /* UIView+REFrostedViewController.m */,
+				17B2C4C60DDAF6A1645DDCF0 /* UIViewController+REFrostedViewController.m */,
+			);
+			path = REFrostedViewController;
+			sourceTree = "<group>";
+		};
+		55F8A64384A20DDF4F987C82 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DA4E6B56C1C5C32B2F4B3749 /* TuistAssets+FlixVision.swift */,
+				A96D0A4B58F3DBF3DEEA733B /* TuistBundle+FlixVision.swift */,
+				A124051CB620E5DBD72606AE /* TuistFonts+FlixVision.swift */,
+				48131EA43E578ADD4D33A1ED /* TuistPlists+FlixVision.swift */,
+				61C333BFAE5D974A94A90962 /* TuistStrings+FlixVision.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		58068FDD077F83D77C5C9687 = {
+			isa = PBXGroup;
+			children = (
+				CB1B4ADF394E3C9B2058AB20 /* Products */,
+				E510E74D6E04CCA0F797CA6B /* Project */,
+				607ECD3E1B5B4EAA98D764FB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		607ECD3E1B5B4EAA98D764FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				365589BB7531D825EC8227AF /* Accounts.framework */,
+				ACA538FEF8E1C19BD85B31C7 /* AppTrackingTransparency.framework */,
+				957A2434AD3E2FF264CA5D77 /* AudioToolbox.framework */,
+				CDE271F8DDDA472450096DA3 /* CFNetwork.framework */,
+				F25FCB58D45640985E99C0E7 /* CoreGraphics.framework */,
+				A1F0CED7B85E80569CEF2529 /* CoreLocation.framework */,
+				0CAB6E0953D2820C3BA5DA31 /* CoreText.framework */,
+				35A0C43CB4461B82B08EE6DF /* Foundation.framework */,
+				753E2D7F18C80F0FB7E6EBBA /* MediaAccessibility.framework */,
+				21F5FF15C525DE68DBD3E05D /* MessageUI.framework */,
+				7CC63D59A515BBB193A271E5 /* QuartzCore.framework */,
+				241C5EB95C45BED7DFC1E428 /* Security.framework */,
+				286C62D8EA36EE9436370443 /* Social.framework */,
+				9BAA2C7F745A72D6A2118B91 /* SystemConfiguration.framework */,
+				20A4D7D30ECAD6A4DD668CA8 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB1B4ADF394E3C9B2058AB20 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADA39DFC9AFAADBBE330763C /* FlixVision.app */,
+				CADDB369A7841E8EFE3ADA1E /* FlixVisionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E510E74D6E04CCA0F797CA6B /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				F5EA035D045358553BC26496 /* Derived */,
+				EB4C3B1D8241E6958F5882D3 /* LeanIOS */,
+				EC0F677885A9E0E87A7DAC56 /* LeanIOSTests */,
+				20733BD93A5B5EC0CC8B8C72 /* GoogleService-Info.plist */,
+				3520A8EF9C5222BFF8324ECD /* Project.entitlements */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		EB4C3B1D8241E6958F5882D3 /* LeanIOS */ = {
+			isa = PBXGroup;
+			children = (
+				358A48DC8690E31D6C3D7FED /* InfoPlist.strings */,
+				969E31C8CC24D3F36090699B /* Localizable.strings */,
+				35118454FF33FDE97536F9AD /* Main.storyboard */,
+				45B977952F5BC8A9FCDDC238 /* REFrostedViewController */,
+				980491C3F29EF688DF16DCE2 /* appbeep.wav */,
+				772E74DAE7504A5F2FB29154 /* appConfig.json */,
+				EE9EEC9DEB27BD7D1BB958EA /* AppIcon */,
+				88BE81EEE3B3CCB08B8E9B25 /* Assets.xcassets */,
+				A40D192C4E809C037815409E /* BlobDownloader.js */,
+				AAF07550C8FC0C32BF14A2C9 /* ContextMenuHandler.swift */,
+				E65BB2905E2F2A329EFBAF5D /* custom-icons.json */,
+				F9D1C0782DB9F9C5FBB6296D /* custom-icons.ttf */,
+				EA875EEFC8F748398450AB7D /* customCSS.css */,
+				DD20476628D355C6F15A87F6 /* customJS.js */,
+				58F28329160AF98FD55EF5B6 /* CustomMenu.swift */,
+				9F597007835CC4D08BE33BCF /* GNBackgroundAudio.m */,
+				561121F48B4A0719B233A2E8 /* GNConfigPreferences.m */,
+				6FBD0B81E5B0452D288F48C5 /* GNCustomHeaders.m */,
+				D282A5BE5164D7D474D8E2AE /* GNFileWriterSharer.m */,
+				16864F9F314D6DDCEEAC1133 /* GNJSBridgeInterface.m */,
+				049186012466977BE6A1E4EB /* GNLogManager.m */,
+				AF5E337E5B5234E5CF800EB2 /* GNRegistrationManager.m */,
+				9B0D52BBFCC510CB7AB54EFC /* GNSwiftUtilities.swift */,
+				D4F4837259FAAE53BD2B6E78 /* GoNativeJSBridgeLibrary.js */,
+				C558E06A3CD99C5D57995E4C /* GTMNSString+HTML.m */,
+				1CF3AE1052D162443398D274 /* Images.xcassets */,
+				4FE708CB1E34928ADA92D50C /* iosCustomCSS.css */,
+				C6A6503DC46B6998B5FB52E0 /* iosCustomJS.js */,
+				49F4239795C511F48134635E /* iosHeaderImage */,
+				6F4654F7C9E2DC9CBE56482F /* LaunchScreen.storyboard */,
+				F573C97F6CE92683D6241150 /* LaunchScreenNav.storyboard */,
+				8076B12455F83EEA169E08D6 /* LaunchScreenNoNav.storyboard */,
+				98434CB09D81BC64741786AC /* LEANActionManager.m */,
+				AA39A629BCB7C24B3AACE79A /* LEANAppDelegate.m */,
+				D6984E72344509C84963C8C4 /* LEANConfigUpdater.m */,
+				73B18FAC768B31799F67EBD9 /* LEANDocumentSharer.m */,
+				119E3A9EFC636FBA6A0B0BDD /* LEANIcons.swift */,
+				F510788E257941F596C1C567 /* LEANInstallation.m */,
+				3626E3D81B47FFB6DA1D6CFE /* LEANJsCustomCodeExecutor.m */,
+				EDA96EACBC10588070486FAE /* LEANKeyboardManager.m */,
+				1F4A350FC8AF448ADE24505F /* LEANLaunchScreenManager.m */,
+				20A276CFFCCA0777480FC51C /* LEANLoadingSpinnerManager.m */,
+				0A2C96C09BE45BC6042E7030 /* LEANLoginManager.m */,
+				2E187D472CF499F5BE2F004F /* LEANMenuViewController.m */,
+				9AADCF714A3A47A84D5DB8AB /* LEANNavigationController.m */,
+				F5A0AE40E474EDA8F26DA56D /* LEANPDFManager.m */,
+				E94D1885F3B1CCA66AF2BA58 /* LEANProfilePicker.m */,
+				61F92428CEC891CD82FC156F /* LEANRegexRulesManager.m */,
+				F3102666271F96AF6C27F203 /* LEANRootViewController.m */,
+				FA7F0444EF9BE55A6F3EE93B /* LEANSceneDelegate.m */,
+				C5053CB7822B7FF6CA29F776 /* LEANTabManager.m */,
+				75C891000BDFD16A422F75AD /* LEANToolbarManager.m */,
+				F2525282AAECA0E346B6669A /* LEANUrlCache.m */,
+				C3284C961CAEB5611551E28C /* LEANUrlInspector.m */,
+				BEBC616F1C833AFAD4713BCF /* LEANUtilities.m */,
+				2FDA15A784C9B1EDDE2907B3 /* LEANWebViewController.m */,
+				50E01E2BEDD376F63D8FA49B /* LEANWebViewIntercept.m */,
+				6098EB8D4E530062F851074B /* LEANWebViewPool.m */,
+				3445912FADEE4A6088E58B25 /* LEANWindowOverrideHandler.m */,
+				D693CEF48A3F3835583C8027 /* LEANWindowsManager.m */,
+				F61CE031D7BCAEF374F37356 /* LiquidTitleView.swift */,
+				77DD7B2ED87312087BAA19C4 /* localCache.zip */,
+				02E4DE8E65E94D6A1E59E974 /* main.m */,
+				C1190D5DA035C81472D1668B /* MedianEventsManager.m */,
+				9F3AC80CC12316A84326F4BF /* MedianIOS-Info.plist */,
+				3CA34548DD14EBA4DAAB5AF5 /* MenuChildIcon.xib */,
+				F5C66DF84542D6EE11E4CCC5 /* MenuChildNoIcon.xib */,
+				9AF2C6F84E43044846306A40 /* MenuGroupIcon.xib */,
+				508AB2208AE88E8CDB8FBBE6 /* MenuGroupNoIcon.xib */,
+				84FD4BB046924754DFF2CFB6 /* NSURL+LEANUtilities.m */,
+				D88F1D7F18D1F13BD635E6DE /* offline.html */,
+				93F5FD5CD5BB41CDA5E4B05C /* PrivacyInfo.xcprivacy */,
+				80D7ACDE8BE2E873BB7A7F32 /* Reachability.m */,
+				BF5225D3355E2FFDA8B14D26 /* Settings.bundle */,
+				44D4E8290E48EFC1424722E0 /* SidebarHeaderView.xib */,
+				94180EDE755612BABE2EC4C5 /* UIApplication+Extensions.swift */,
+				B2EE156295127A3617542C0C /* WebViewViewportManager.swift */,
+				3601426C0FA4DF1129204B84 /* WindowsController.swift */,
+			);
+			path = LeanIOS;
+			sourceTree = "<group>";
+		};
+		EC0F677885A9E0E87A7DAC56 /* LeanIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				29324B0DD6467700FC8ED58F /* LeanIOSTests.m */,
+				60CE75CE75DA07E07FE86142 /* MedianIOSTests-Info.plist */,
+			);
+			path = LeanIOSTests;
+			sourceTree = "<group>";
+		};
+		F5EA035D045358553BC26496 /* Derived */ = {
+			isa = PBXGroup;
+			children = (
+				55F8A64384A20DDF4F987C82 /* Sources */,
+			);
+			path = Derived;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		10CB596E8CE958F978FDA509 /* FlixVisionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A54B3663004001411281C55D /* Build configuration list for PBXNativeTarget "FlixVisionTests" */;
+			buildPhases = (
+				753DB59B16F20F367C134D73 /* Sources */,
+				2A5719B621DADD1AA1CCBB89 /* Resources */,
+				D06341BE02965723C965A681 /* Frameworks */,
+				7B5BD4CA5AA11BA98C21292A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30B64EF8EC086F49316C6853 /* PBXTargetDependency */,
+			);
+			name = FlixVisionTests;
+			packageProductDependencies = (
+			);
+			productName = FlixVisionTests;
+			productReference = CADDB369A7841E8EFE3ADA1E /* FlixVisionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7AB4B77EED9DF4887E4B4FE6 /* FlixVision */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB42008C074E9AFA1B663CA1 /* Build configuration list for PBXNativeTarget "FlixVision" */;
+			buildPhases = (
+				CB51FB7EB612A5F308C2EE72 /* Sources */,
+				BEDE5FB062B861161605E678 /* Resources */,
+				5A1C8A2B37C3668FE1BC8BCA /* Frameworks */,
+				983AF581D732907A68A64E9E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlixVision;
+			packageProductDependencies = (
+				BAF68D1E5916C3BD597FA5F5 /* GoNativeCore */,
+				0B7BE17488B6C8953FCAFDB9 /* MedianIcons */,
+				FF9DF5564416195B8C9D2447 /* ZipArchive */,
+			);
+			productName = FlixVision;
+			productReference = ADA39DFC9AFAADBBE330763C /* FlixVision.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16B12D6E9CD9B79F2B4AC47A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				ORGANIZATIONNAME = GoNative.io;
+				TargetAttributes = {
+					10CB596E8CE958F978FDA509 = {
+						TestTargetID = 7AB4B77EED9DF4887E4B4FE6;
+					};
+				};
+			};
+			buildConfigurationList = 5E2BE95804A69F8F5D886D68 /* Build configuration list for PBXProject "FlixVision" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				ar,
+				ca,
+				cs,
+				da,
+				de,
+				en,
+				es,
+				"es-419",
+				et,
+				fa,
+				fi,
+				fr,
+				gd,
+				he,
+				hu,
+				it,
+				ja,
+				ko,
+				lt,
+				lv,
+				nl,
+				"nn-NO",
+				pt,
+				"pt-BR",
+				"pt-PT",
+				ru,
+				tr,
+				uk,
+				"zh-Hans",
+				"zh-Hant",
+			);
+			mainGroup = 58068FDD077F83D77C5C9687;
+			packageReferences = (
+				823CC0F5AC8A1D7A2177F08E /* XCRemoteSwiftPackageReference "ZipArchive" */,
+				E267639FF01CB88F05F98F0C /* XCRemoteSwiftPackageReference "median.go-native-core" */,
+				64D4FBF6CA33C3424235132D /* XCRemoteSwiftPackageReference "median.median-icons" */,
+			);
+			productRefGroup = CB1B4ADF394E3C9B2058AB20 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7AB4B77EED9DF4887E4B4FE6 /* FlixVision */,
+				10CB596E8CE958F978FDA509 /* FlixVisionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A5719B621DADD1AA1CCBB89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEDE5FB062B861161605E678 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFFC7662DC2DD52F0DD66CF4 /* GoogleService-Info.plist in Resources */,
+				42023DAE4194E04454A9AA9D /* AppIcon in Resources */,
+				B253CEECD72446A748887558 /* Assets.xcassets in Resources */,
+				B791C9A23A81A100FD4DAFE1 /* Main.storyboard in Resources */,
+				F9B9280EB48EB48631F903C3 /* BlobDownloader.js in Resources */,
+				DD267FD664AD30081F61487D /* GoNativeJSBridgeLibrary.js in Resources */,
+				444B88E77FE4DDCD3052C059 /* Images.xcassets in Resources */,
+				979D01DEE04945BB40C08389 /* LaunchScreen.storyboard in Resources */,
+				CCC742579DB9F1CBB60E2B34 /* LaunchScreenNav.storyboard in Resources */,
+				381BEFCD55DE8FB6C1DF6610 /* LaunchScreenNoNav.storyboard in Resources */,
+				E24858F5DB5CDA434EE7E907 /* MenuChildIcon.xib in Resources */,
+				E3F5B83DAC0D7B2A9A4A45F6 /* MenuChildNoIcon.xib in Resources */,
+				11BFA3F34C010DC99F43C0FC /* MenuGroupIcon.xib in Resources */,
+				FB27E365ECBA238EB415C685 /* MenuGroupNoIcon.xib in Resources */,
+				058201F8CA6A42D408D602E9 /* PrivacyInfo.xcprivacy in Resources */,
+				6E2C9713046C01551740748E /* Settings.bundle in Resources */,
+				B775C0CEC27CD4B8B2985FCF /* SidebarHeaderView.xib in Resources */,
+				150D6299524F404776B05A77 /* appConfig.json in Resources */,
+				E66CFF42460E62838E8FEFB4 /* appbeep.wav in Resources */,
+				1975FCA3E153C7F5624A96F1 /* Localizable.strings in Resources */,
+				494A73E6817491D594DBFB98 /* custom-icons.json in Resources */,
+				35747BDE4BEF41577AF157F5 /* custom-icons.ttf in Resources */,
+				31CBBF7413FADFAED5BCDA21 /* customCSS.css in Resources */,
+				B8546B5A2C7F810BDC793436 /* customJS.js in Resources */,
+				930FCD685CDBE67B41367444 /* InfoPlist.strings in Resources */,
+				94EDB20982F39123D031E903 /* iosCustomCSS.css in Resources */,
+				8C2574B78B23DC20D8B0C6BF /* iosCustomJS.js in Resources */,
+				824EC70725B0EE0431B75C1B /* iosHeaderImage in Resources */,
+				45902307CE0C36960644F275 /* localCache.zip in Resources */,
+				C40B2A0B06543F11BB48D8AA /* offline.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		753DB59B16F20F367C134D73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B3B21EA59756B20F8C0EE54 /* LeanIOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB51FB7EB612A5F308C2EE72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7775B675B5E6985E156DBD1 /* TuistAssets+FlixVision.swift in Sources */,
+				F8D5DB0BA111FD31441C8258 /* TuistBundle+FlixVision.swift in Sources */,
+				17AD2A6B33F383451A4108D5 /* TuistFonts+FlixVision.swift in Sources */,
+				F1938C3F9C158C65D83AA3DB /* TuistPlists+FlixVision.swift in Sources */,
+				95DC30837860D2A5EF582E36 /* TuistStrings+FlixVision.swift in Sources */,
+				E4B56136ADF9C030F55B8F58 /* ContextMenuHandler.swift in Sources */,
+				55CE31D80C506526CB0CA500 /* CustomMenu.swift in Sources */,
+				EC25105BB433CD500940EA2A /* GNBackgroundAudio.m in Sources */,
+				985629F91B647DEB99D53543 /* GNConfigPreferences.m in Sources */,
+				420BC7CC919BB53B4CE4E00A /* GNCustomHeaders.m in Sources */,
+				40A08936357D126EFD457B31 /* GNFileWriterSharer.m in Sources */,
+				93EF5AAB85BAA4A72573CCA1 /* GNJSBridgeInterface.m in Sources */,
+				BBCA8A0717652E528F68A11C /* GNLogManager.m in Sources */,
+				E7028640C9C6DFA09F56C4DF /* GNRegistrationManager.m in Sources */,
+				CE3C740EA4D45409FF8DEB2A /* GNSwiftUtilities.swift in Sources */,
+				6AF8354AAEE6D4E9A3604572 /* GTMNSString+HTML.m in Sources */,
+				9E00FBB127B4D72FB621C3AA /* LEANActionManager.m in Sources */,
+				06A2901EA6BCAFDBF3DA0015 /* LEANAppDelegate.m in Sources */,
+				996AB7BCF77B36DAB009BB1A /* LEANConfigUpdater.m in Sources */,
+				E6C322BA0CC2B05399B81F1D /* LEANDocumentSharer.m in Sources */,
+				B687398C3B6E188775A6CB0B /* LEANIcons.swift in Sources */,
+				F0E9F6A81302710CED730AF3 /* LEANInstallation.m in Sources */,
+				15A95E505F2A9635FAABEF44 /* LEANJsCustomCodeExecutor.m in Sources */,
+				88D181CDD0D8B349782EFD99 /* LEANKeyboardManager.m in Sources */,
+				25AE9178BD34CEC7183CBB48 /* LEANLaunchScreenManager.m in Sources */,
+				7CDC0A815AB9502A78D234B2 /* LEANLoadingSpinnerManager.m in Sources */,
+				5DC87A95BFB767351B1DCCE2 /* LEANLoginManager.m in Sources */,
+				458930E51DE640BDA7424D01 /* LEANMenuViewController.m in Sources */,
+				68DC084A106BDA6DD68F1A68 /* LEANNavigationController.m in Sources */,
+				3F3C8840CF29915AEC6416F0 /* LEANPDFManager.m in Sources */,
+				4FB4B8D786373854C3CBBC27 /* LEANProfilePicker.m in Sources */,
+				7E6F7310D874D9BC95156DA6 /* LEANRegexRulesManager.m in Sources */,
+				F6060EF3B99FB49C25C5D9A9 /* LEANRootViewController.m in Sources */,
+				1A026611901D2BAE9E788F90 /* LEANSceneDelegate.m in Sources */,
+				1EEEA7EE54909E3B2D7ACC44 /* LEANTabManager.m in Sources */,
+				F9C91029A10A17ABD1EEF819 /* LEANToolbarManager.m in Sources */,
+				3981C5B18569B8F8CE8ACB42 /* LEANUrlCache.m in Sources */,
+				026480F8089218FD026BDC4B /* LEANUrlInspector.m in Sources */,
+				51B09E04EC1255458CE10EB7 /* LEANUtilities.m in Sources */,
+				6F010D9A2F1281AF74220F7A /* LEANWebViewController.m in Sources */,
+				61279CBB79537844F51DF13B /* LEANWebViewIntercept.m in Sources */,
+				C74D5F57A22EEFAFD9D283BB /* LEANWebViewPool.m in Sources */,
+				AE234DB0BB15A71BC95BE2FE /* LEANWindowOverrideHandler.m in Sources */,
+				27F71972052ED23B09F5D40D /* LEANWindowsManager.m in Sources */,
+				9655EFFC6E57AD308278FE76 /* LiquidTitleView.swift in Sources */,
+				426CCFE4964B4C6F2D5BCBCB /* MedianEventsManager.m in Sources */,
+				13C6E47698BAAD9988607133 /* NSURL+LEANUtilities.m in Sources */,
+				F4921445D776517A5A7DF253 /* RECommonFunctions.m in Sources */,
+				4E99B6234BAE4397ED906CF2 /* REFrostedContainerViewController.m in Sources */,
+				8B8B505C43F7A8E541E881B2 /* REFrostedViewController.m in Sources */,
+				DDE533A6879BE487F8D3C1BD /* UIImage+REFrostedViewController.m in Sources */,
+				159A9A4A9D4B081AC220732D /* UIView+REFrostedViewController.m in Sources */,
+				469814982BC4A26B69B7B7D5 /* UIViewController+REFrostedViewController.m in Sources */,
+				796C25E14DE7102DCED8B6A8 /* Reachability.m in Sources */,
+				2C026D9BC001E7D70A40C3AE /* UIApplication+Extensions.swift in Sources */,
+				7DC780944EA590EF0EF3B139 /* WebViewViewportManager.swift in Sources */,
+				21752FF0DEC18A3735262D48 /* WindowsController.swift in Sources */,
+				77C10FBA0BC282D7F7A6B593 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		30B64EF8EC086F49316C6853 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FlixVision;
+			target = 7AB4B77EED9DF4887E4B4FE6 /* FlixVision */;
+			targetProxy = F9535EA8B1968B99EA6A4593 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		35118454FF33FDE97536F9AD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C05937AE7C433790ECF5D4D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		358A48DC8690E31D6C3D7FED /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				082155E49B519329B13745DF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		969E31C8CC24D3F36090699B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B960012A1B28560EC4E176B0 /* ar */,
+				7383A964702AF42099B94525 /* ca */,
+				06A844718607A85FA23BCFDE /* cs */,
+				19DB49C69A1406030B75697B /* da */,
+				A245AB5450C1CAD8DCEAEF3C /* de */,
+				E15C3700B92E926C5A23BD43 /* en */,
+				A1A6C780E619440D7EFC8E2E /* es */,
+				FF9BB88DEB160CE4C09D34CC /* es-419 */,
+				1099C504DDB03E8DB4EE48B7 /* et */,
+				E870564D92775270880AEDE4 /* fa */,
+				FEC3909F4102B35B3E0E1FB5 /* fi */,
+				DC59F617779858BA6DB8E96F /* fr */,
+				D3CDFFD99118E407EA5571D0 /* gd */,
+				2085B3516BCF3EB6E5BBF2AC /* he */,
+				4F2546A2D7BBF688408FFABA /* hu */,
+				7EE14796DB17EA3C6996F46B /* it */,
+				B081B402354B1D1B9DA4DB9E /* ja */,
+				77DB9E60C82A3EF3C2F603F1 /* ko */,
+				41677D91E6D6A49E90ECADF1 /* lt */,
+				274280E42974FAC4DDCA58C4 /* lv */,
+				A6BEBE2D17428951A8AF9423 /* nl */,
+				EBDA5BA3EED63838F30A0131 /* nn-NO */,
+				C3ADB6EE2679C7387C703E67 /* pt */,
+				4CE7B4DA0242FD3C65213EF8 /* pt-BR */,
+				4711FEFFCF3F9299E1465144 /* pt-PT */,
+				66E41B2D1ECC419B6764CAC7 /* ru */,
+				789C18DE8BE8BA2C775AF730 /* tr */,
+				B2BC79AF0224F7B941510F70 /* uk */,
+				DD8D2A327884606EC9B20AB3 /* zh-Hans */,
+				93CC8A63EFEF89791416CAE6 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		107B578604D69D7D678C8913 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LeanIOS/MedianIOS-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(inherited) $(SRCROOT)/LeanIOS $(SRCROOT)/LeanIOS/REFrostedViewController",
+				);
+				INFOPLIST_FILE = "LeanIOSTests/MedianIOSTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-L$(DT_TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.median.ios.pwmdloqTests;
+				PRODUCT_NAME = FlixVisionTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlixVision.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FlixVision";
+				TEST_TARGET_NAME = FlixVision;
+			};
+			name = Release;
+		};
+		29320E37A192A37CBD12CDCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LeanIOS/MedianIOS-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(inherited) $(SRCROOT)/LeanIOS $(SRCROOT)/LeanIOS/REFrostedViewController",
+				);
+				INFOPLIST_FILE = "LeanIOSTests/MedianIOSTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-L$(DT_TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.median.ios.pwmdloqTests;
+				PRODUCT_NAME = FlixVisionTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+					"$(inherited)",
+					DEBUG,
+				);
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlixVision.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FlixVision";
+				TEST_TARGET_NAME = FlixVision;
+			};
+			name = Debug;
+		};
+		35E974C7AB9A587EA1711FA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_SETTINGS_APP_NAME = "Flix Vision";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Project.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_LANGUAGE = en;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LeanIOS/MedianIOS-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/LeanIOS $(SRCROOT)/LeanIOS/REFrostedViewController";
+				INFOPLIST_FILE = "LeanIOS/MedianIOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"-ObjC $(inherited)",
+					"-L$(DT_TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.median.ios.pwmdloq;
+				PRODUCT_NAME = FlixVision;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "LeanIOS/GonativeIO-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "GonativeIO-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		48EA4CC8181904198EECAC70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49B23BEE84746114F892F9BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E68453694972C1867CF30311 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_SETTINGS_APP_NAME = "Flix Vision";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Project.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_LANGUAGE = en;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LeanIOS/MedianIOS-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/LeanIOS $(SRCROOT)/LeanIOS/REFrostedViewController";
+				INFOPLIST_FILE = "LeanIOS/MedianIOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"-ObjC $(inherited)",
+					"-L$(DT_TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.median.ios.pwmdloq;
+				PRODUCT_NAME = FlixVision;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+					"$(inherited)",
+					DEBUG,
+				);
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OBJC_BRIDGING_HEADER = "LeanIOS/GonativeIO-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "GonativeIO-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5E2BE95804A69F8F5D886D68 /* Build configuration list for PBXProject "FlixVision" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49B23BEE84746114F892F9BE /* Debug */,
+				48EA4CC8181904198EECAC70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A54B3663004001411281C55D /* Build configuration list for PBXNativeTarget "FlixVisionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29320E37A192A37CBD12CDCF /* Debug */,
+				107B578604D69D7D678C8913 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB42008C074E9AFA1B663CA1 /* Build configuration list for PBXNativeTarget "FlixVision" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E68453694972C1867CF30311 /* Debug */,
+				35E974C7AB9A587EA1711FA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		64D4FBF6CA33C3424235132D /* XCRemoteSwiftPackageReference "median.median-icons" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "median.median-icons";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+		823CC0F5AC8A1D7A2177F08E /* XCRemoteSwiftPackageReference "ZipArchive" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ZipArchive/ZipArchive";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.0;
+			};
+		};
+		E267639FF01CB88F05F98F0C /* XCRemoteSwiftPackageReference "median.go-native-core" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "median.go-native-core";
+			requirement = {
+				kind = exactVersion;
+				version = 3.0.17;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0B7BE17488B6C8953FCAFDB9 /* MedianIcons */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MedianIcons;
+		};
+		BAF68D1E5916C3BD597FA5F5 /* GoNativeCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GoNativeCore;
+		};
+		FF9DF5564416195B8C9D2447 /* ZipArchive */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ZipArchive;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 16B12D6E9CD9B79F2B4AC47A /* Project object */;
+}
