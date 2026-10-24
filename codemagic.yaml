@@ -5,7 +5,7 @@ workflows:
     environment:
       xcode: latest
     scripts:
-      - name: Clean Unused Files and Build
+      - name: Extract All and Build
         script: |
           echo "=== Extracting ZIP files ==="
           for f in *.zip; do
@@ -14,8 +14,18 @@ workflows:
             fi
           done
           
-          # لابردنی مەرجی فایلە ونبووەکانی Tuist لەناو پڕۆژەکەدا ئەگەر هەبن
-          echo "=== Starting Direct Build ==="
+          # دڵنیابوون لەوەی فۆڵدەری Derived لە شوێنی خۆیدا هەیە
+          if [ -d "Derived" ]; then
+            mkdir -p FlixVision.xcodeproj/project.xcworkspace/xcshareddata/ || true
+            echo "Derived sources found and ready!"
+          fi
+          
+          # دروستکردنی فایلی entitlements
+          printf '<?xml version="1.0" encoding="UTF-8"?>\n' > Project.entitlements
+          printf '<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">\n' >> Project.entitlements
+          printf '<plist version="1.0">\n<dict>\n</dict>\n</plist>\n' >> Project.entitlements
+          
+          echo "=== Starting Build ==="
           mkdir -p build/ios/ipa
           
           if [ -d "FlixVision.xcodeproj" ]; then
