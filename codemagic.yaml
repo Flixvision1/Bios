@@ -5,40 +5,61 @@ workflows:
     environment:
       xcode: latest
     scripts:
-      - name: Unzip and Find Project
+      - name: Extract and Locate Project Files
         script: |
+          echo "=== Listing root files ==="
+          ls -la
+          
           if [ -f "LeanIOS.zip" ]; then
+            echo "Unzipping LeanIOS.zip..."
             unzip -q LeanIOS.zip -d .
           fi
-          # گەڕان بە دوای فایلەکانی پڕۆژە لە هەموو شوێنێک
-          find . -name "*.xcodeproj" -o -name "*.xcworkspace"
-      - name: Build Real Archive
+          
+          echo "=== Listing files after unzip ==="
+          ls -la
+          
+          # دڵنیابوون لە بوونی فایلی entitlements
+          if [ ! -f "Project.entitlements" ]; then
+            echo '<?xml version="1.0" encoding="UTF-8"?>' > Project.entitlements
+            echo '<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">' >> Project.entitlements
+            echo '<plist version="1.0"><dict></dict></plist>' >> Project.entitlements
+          fi
+      - name: Build and Package App
         script: |
-          # دۆزینەوە و چوونە ناو فۆڵدەری پڕۆژە و باڵدکردن
-          PROJECT_DIR=$(find . -maxdepth 3 -name "*.xcodeproj" | head -n 1)
-          if [ -z "$PROJECT_DIR" ]; then
-            PROJECT_DIR=$(find . -maxdepth 3 -name "*.xcworkspace" | head -n 1)
-          fi
+          # گەڕان بە دوای فایلی پڕۆژە لە هەموو شوێنێک
+          PROJECT_FILE=$(find . -name "*.xcodeproj" -maxdepth 3 | head -n 1)
+          WORKSPACE_FILE=$(find . -name "*.xcworkspace" -maxdepth 3 | head -n 1)
           
-          echo "Found project at: $PROJECT_DIR"
-          
-          # ئەگەر پڕۆژە دۆزرایەوە باڵدی بکە
-          parent_dir=$(dirname "$PROJECT_DIR")
-          cd "$parent_dir"
-          
-          if [[ "$PROJECT_DIR" == *.xcworkspace ]]; then
-            workspace_name=$(basename "$PROJECT_DIR")
-            xcodebuild -workspace "$workspace_name" -scheme Median -sdk iphoneos -configuration Release archive -archivePath build/MedianIOS.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+          if [ -n "$WORKSPACE_FILE" ]; then
+            echo "Found workspace: $WORKSPACE_FILE"
+            dir_name=$(dirname "$WORKSPACE_FILE")
+            cd "$dir_name"
+            xcodebuild -workspace "$(basename "$WORKSPACE_FILE")" -scheme Median -sdk iphoneos -configuration Release archive -archivePath build/MedianIOS.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+            
+            mkdir -p ../build/ios/ipa
+            if [ -d "build/MedianIOS.xcarchive/Products/Applications/" ]; then
+              cd build/MedianIOS.xcarchive/Products/Applications/
+              zip -r ../../../../build/ios/ipa/FlixVision.zip .
+              echo "SUCCESS: Zip file created!"
+            fi
+          elif [ -n "$PROJECT_FILE" ]; then
+            echo "Found project: $PROJECT_FILE"
+            dir_name=$(dirname "$PROJECT_FILE")
+            cd "$dir_name"
+            xcodebuild -project "$(basename "$PROJECT_FILE")" -scheme Median -sdk iphoneos -configuration Release archive -archivePath build/MedianIOS.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+            
+            mkdir -p ../build/ios/ipa
+            if [ -d "build/MedianIOS.xcarchive/Products/Applications/" ]; then
+              cd build/MedianIOS.xcarchive/Products/Applications/
+              zip -r ../../../../build/ios/ipa/FlixVision.zip .
+              echo "SUCCESS: Zip file created!"
+            fi
           else
-            project_name=$(basename "$PROJECT_DIR")
-            xcodebuild -project "$project_name" -scheme Median -sdk iphoneos -configuration Release archive -archivePath build/MedianIOS.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
-          fi
-          
-          mkdir -p ../../build/ios/ipa
-          if [ -d "build/MedianIOS.xcarchive/Products/Applications/" ]; then
-            cd build/MedianIOS.xcarchive/Products/Applications/
-            zip -r ../../../../build/ios/ipa/FlixVision.zip .
+            echo "ERROR: No xcodeproj or xcworkspace found!"
+            exit 1
           fi
     artifacts:
       - build/ios/ipa/*.ipa
       - build/ios/ipa/*.zip
+      - "**/build/ios/ipa/*.zip"
+      - "**/FlixVision.zip"
