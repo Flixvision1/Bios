@@ -27,18 +27,19 @@ jobs:
 
       - name: Build Archive Directly
         run: |
-          mkdir -p build/ios/ipa
           xcodebuild -workspace FlixVision.xcworkspace -scheme FlixVision -sdk iphoneos -configuration Release archive -archivePath build/FlixVision.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO -skipPackagePluginValidation
 
-      - name: Zip IPA
+      - name: Create Proper IPA
         run: |
-          if [ -d "build/FlixVision.xcarchive/Products/Applications/" ]; then
-            cd build/FlixVision.xcarchive/Products/Applications/
-            zip -r ../../../../build/ios/ipa/FlixVision.zip .
-          fi
+          mkdir -p build/Payload
+          cp -r build/FlixVision.xcarchive/Products/Applications/FlixVision.app build/Payload/
+          cd build
+          zip -r FlixVision.ipa Payload
+          mkdir -p ios/ipa
+          mv FlixVision.ipa ios/ipa/
 
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: FlixVision-App
-          path: build/ios/ipa/*.zip
+          name: FlixVision-IPA
+          path: build/ios/ipa/*.ipa
