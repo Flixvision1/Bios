@@ -24,12 +24,10 @@ jobs:
           if [ -f "FlixVision.xcodeproj.zip" ]; then unzip -q FlixVision.xcodeproj.zip; fi
           if [ -f "FlixVision.xcworkspace.zip" ]; then unzip -q FlixVision.xcworkspace.zip; fi
 
-      - name: Install Tuist & Generate
+      - name: Install Tuist Fast & Generate
         run: |
-          curl -Ls https://github.com/tuist/tuist/releases/latest/download/tuist-macos.zip -o tuist.zip
-          unzip -q tuist.zip -d tuist-bin
-          sudo mv tuist-bin/tuist /usr/local/bin/tuist
-          tuist --version
+          export HOMEBREW_NO_AUTO_UPDATE=1
+          brew install tuist
           tuist install
           tuist generate --no-open
 
