@@ -1,0 +1,38 @@
+workflows:
+  ios-workflow:
+    name: Flix Vision iOS Workflow
+    max_build_duration: 120
+    environment:
+      xcode: latest
+    scripts:
+      - name: Extract and Build
+        script: |
+          echo "=== Extracting ZIP files ==="
+          for f in *.zip; do
+            if [ -f "$f" ]; then
+              unzip -q "$f" -d .
+            fi
+          done
+          
+          # دروستکردنی فایلی entitlements بۆ پاراستن
+          printf '<?xml version="1.0" encoding="UTF-8"?>\n' > Project.entitlements
+          printf '<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">\n' >> Project.entitlements
+          printf '<plist version="1.0">\n<dict>\n</dict>\n</plist>\n' >> Project.entitlements
+          
+          echo "=== Starting Build ==="
+          mkdir -p build/ios/ipa
+          
+          if [ -d "FlixVision.xcworkspace" ]; then
+            xcodebuild -workspace FlixVision.xcworkspace -scheme FlixVision -sdk iphoneos -configuration Release archive -archivePath build/FlixVision.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+          elif [ -d "FlixVision.xcodeproj" ]; then
+            xcodebuild -project FlixVision.xcodeproj -scheme FlixVision -sdk iphoneos -configuration Release archive -archivePath build/FlixVision.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+          fi
+          
+          if [ -d "build/FlixVision.xcarchive/Products/Applications/" ]; then
+            cd build/FlixVision.xcarchive/Products/Applications/
+            zip -r ../../../../build/ios/ipa/FlixVision.zip .
+            echo "SUCCESS: FlixVision.zip created!"
+          fi
+    artifacts:
+      - build/ios/ipa/*.zip
+      - "**/build/ios/ipa/*.zip"
