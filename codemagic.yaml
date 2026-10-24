@@ -5,57 +5,47 @@ workflows:
     environment:
       xcode: latest
     scripts:
-      - name: Extract and Locate Project Files
+      - name: Extract and Find Project
         script: |
-          echo "=== Listing root files ==="
-          ls -la
-          
           if [ -f "LeanIOS.zip" ]; then
-            echo "Unzipping LeanIOS.zip..."
-            unzip -q LeanIOS.zip -d .
+            unzip -q LeanIOS.zip -d extracted_files
           fi
-          
-          echo "=== Listing files after unzip ==="
-          ls -la
-          
-          # دڵنیابوون لە بوونی فایلی entitlements
-          if [ ! -f "Project.entitlements" ]; then
-            echo '<?xml version="1.0" encoding="UTF-8"?>' > Project.entitlements
-            echo '<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">' >> Project.entitlements
-            echo '<plist version="1.0"><dict></dict></plist>' >> Project.entitlements
-          fi
+          # گەڕانی گشتگیر بە دوای فۆڵدەری پڕۆژەدا
+          find . -name "*.xcodeproj" -o -name "*.xcworkspace"
       - name: Build and Package App
         script: |
-          # گەڕان بە دوای فایلی پڕۆژە لە هەموو شوێنێک
-          PROJECT_FILE=$(find . -name "*.xcodeproj" -maxdepth 3 | head -n 1)
-          WORKSPACE_FILE=$(find . -name "*.xcworkspace" -maxdepth 3 | head -n 1)
+          # دۆزینەوەی شوێنی ڕاستەقینەی پڕۆژەکە یان وۆرکسپەیسەکە
+          WORKSPACE_PATH=$(find . -name "*.xcworkspace" | head -n 1)
+          PROJECT_PATH=$(find . -name "*.xcodeproj" | head -n 1)
           
-          if [ -n "$WORKSPACE_FILE" ]; then
-            echo "Found workspace: $WORKSPACE_FILE"
-            dir_name=$(dirname "$WORKSPACE_FILE")
-            cd "$dir_name"
-            xcodebuild -workspace "$(basename "$WORKSPACE_FILE")" -scheme Median -sdk iphoneos -configuration Release archive -archivePath build/MedianIOS.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+          if [ -n "$WORKSPACE_PATH" ]; then
+            TARGET_DIR=$(dirname "$WORKSPACE_PATH")
+            cd "$TARGET_DIR"
+            WORKSPACE_NAME=$(basename "$WORKSPACE_PATH")
+            echo "Building workspace: $WORKSPACE_NAME in $TARGET_DIR"
             
-            mkdir -p ../build/ios/ipa
+            xcodebuild -workspace "$WORKSPACE_NAME" -scheme Median -sdk iphoneos -configuration Release archive -archivePath build/MedianIOS.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+            
+            mkdir -p ../../build/ios/ipa
             if [ -d "build/MedianIOS.xcarchive/Products/Applications/" ]; then
               cd build/MedianIOS.xcarchive/Products/Applications/
               zip -r ../../../../build/ios/ipa/FlixVision.zip .
-              echo "SUCCESS: Zip file created!"
             fi
-          elif [ -n "$PROJECT_FILE" ]; then
-            echo "Found project: $PROJECT_FILE"
-            dir_name=$(dirname "$PROJECT_FILE")
-            cd "$dir_name"
-            xcodebuild -project "$(basename "$PROJECT_FILE")" -scheme Median -sdk iphoneos -configuration Release archive -archivePath build/MedianIOS.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+          elif [ -n "$PROJECT_PATH" ]; then
+            TARGET_DIR=$(dirname "$PROJECT_PATH")
+            cd "$TARGET_DIR"
+            PROJECT_NAME=$(basename "$PROJECT_PATH")
+            echo "Building project: $PROJECT_NAME in $TARGET_DIR"
             
-            mkdir -p ../build/ios/ipa
+            xcodebuild -project "$PROJECT_NAME" -scheme Median -sdk iphoneos -configuration Release archive -archivePath build/MedianIOS.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+            
+            mkdir -p ../../build/ios/ipa
             if [ -d "build/MedianIOS.xcarchive/Products/Applications/" ]; then
               cd build/MedianIOS.xcarchive/Products/Applications/
               zip -r ../../../../build/ios/ipa/FlixVision.zip .
-              echo "SUCCESS: Zip file created!"
             fi
           else
-            echo "ERROR: No xcodeproj or xcworkspace found!"
+            echo "Error: Neither xcworkspace nor xcodeproj found anywhere!"
             exit 1
           fi
     artifacts:
