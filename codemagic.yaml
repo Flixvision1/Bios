@@ -14,15 +14,11 @@ workflows:
             unzip -q LeanIOS.zip -d .
           fi
           
-          # دروستکردنی فایلی Project.entitlements بە شێوەیەکی پارێزراو
-          cat << 'EOF' > Project.entitlements
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-</dict>
-</plist>
-EOF
+          # دروستکردنی فایلی entitlements بە ڕێگەیەکی زۆر پارێزراو بێ کێشەی YAML
+          printf '<?xml version="1.0" encoding="UTF-8"?>\n' > Project.entitlements
+          printf '<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">\n' >> Project.entitlements
+          printf '<plist version="1.0">\n<dict>\n</dict>\n</plist>\n' >> Project.entitlements
+          
           ls -la
       - name: Build Archive and Package
         script: |
