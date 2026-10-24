@@ -5,12 +5,17 @@ workflows:
     environment:
       xcode: latest
     scripts:
-      - name: Install Tuist via Homebrew
+      - name: Unzip LeanIOS and generate project with Tuist
         script: |
-          brew install tuist
+          if [ -f "LeanIOS.zip" ]; then
+            unzip -q LeanIOS.zip -d .
+          fi
+          curl -Ls https://install.tuist.io | bash
+          export PATH="$HOME/.tuist/bin:$PATH"
           tuist generate --no-open
       - name: Build archive and export
         script: |
+          export PATH="$HOME/.tuist/bin:$PATH"
           xcodebuild -workspace MedianIOS.xcworkspace -scheme Median -sdk iphoneos -configuration Release archive -archivePath build/MedianIOS.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
           mkdir -p build/ios/ipa
           cd build/MedianIOS.xcarchive/Products/Applications/
