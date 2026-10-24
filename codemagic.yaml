@@ -5,7 +5,7 @@ workflows:
     environment:
       xcode: latest
     scripts:
-      - name: Extract ZIP files and Run Tuist
+      - name: Clean Unused Files and Build
         script: |
           echo "=== Extracting ZIP files ==="
           for f in *.zip; do
@@ -14,28 +14,14 @@ workflows:
             fi
           done
           
-          # دڵنیابوون لە بوونی توایست و دروستکردنی فایلەکان
-          if command -v tuist &> /dev/null; then
-            echo "Running tuist generate..."
-            tuist generate --no-open
-          else
-            echo "Installing tuist..."
-            curl -Ls https://install.tuist.io | bash
-            tuist generate --no-open
-          fi
-          
-          # دروستکردنی فایلی entitlements بۆ پاراستن
-          printf '<?xml version="1.0" encoding="UTF-8"?>\n' > Project.entitlements
-          printf '<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">\n' >> Project.entitlements
-          printf '<plist version="1.0">\n<dict>\n</dict>\n</plist>\n' >> Project.entitlements
-          
-          echo "=== Starting Build ==="
+          # لابردنی مەرجی فایلە ونبووەکانی Tuist لەناو پڕۆژەکەدا ئەگەر هەبن
+          echo "=== Starting Direct Build ==="
           mkdir -p build/ios/ipa
           
-          if [ -d "FlixVision.xcworkspace" ]; then
-            xcodebuild -workspace FlixVision.xcworkspace -scheme FlixVision -sdk iphoneos -configuration Release archive -archivePath build/FlixVision.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
-          elif [ -d "FlixVision.xcodeproj" ]; then
+          if [ -d "FlixVision.xcodeproj" ]; then
             xcodebuild -project FlixVision.xcodeproj -scheme FlixVision -sdk iphoneos -configuration Release archive -archivePath build/FlixVision.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+          elif [ -d "FlixVision.xcworkspace" ]; then
+            xcodebuild -workspace FlixVision.xcworkspace -scheme FlixVision -sdk iphoneos -configuration Release archive -archivePath build/FlixVision.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
           fi
           
           if [ -d "build/FlixVision.xcarchive/Products/Applications/" ]; then
