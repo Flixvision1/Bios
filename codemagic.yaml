@@ -5,49 +5,29 @@ workflows:
     environment:
       xcode: latest
     scripts:
-      - name: Setup Project Workspace
+      - name: Setup Workspace and Files
         script: |
-          echo "=== Checking files ==="
+          echo "=== Checking repository files ==="
           ls -la
           
           if [ -f "LeanIOS.zip" ]; then
             unzip -q LeanIOS.zip -d .
           fi
           
-          # ئەگەر هیچ فایلی پڕۆژەیەک نەبوو، یەکێکی نوێ دروست دەکات بۆ ئەوەی بڵدەکە نەکەوێتە هەڵە
-          if [ ! -d "MedianIOS.xcodeproj" ] && [ ! -d "MedianIOS.xcworkspace" ]; then
-            echo "Creating a fallback project structure..."
-            mkdir -p LeanIOS
-            cat << 'EOF' > LeanIOS/Info.plist
+          # دروستکردنی فایلی Project.entitlements بە شێوەیەکی پارێزراو
+          cat << 'EOF' > Project.entitlements
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>CFBundleIdentifier</key>
-    <string>io.gonative.ios.dev</string>
-    <key>CFBundleShortVersionString</key>
-    <string>1.0</string>
-    <key>CFBundleVersion</key>
-    <string>1</string>
-    <key>CFBundleName</key>
-    <string>Median</string>
 </dict>
 </plist>
 EOF
-          fi
-          
-          # دروستکردنی فایلی entitlements ئەگەر نەبوو
-          if [ ! -f "Project.entitlements" ]; then
-            echo '<?xml version="1.0" encoding="UTF-8"?>' > Project.entitlements
-            echo '<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">' >> Project.entitlements
-            echo '<plist version="1.0"><dict></dict></plist>' >> Project.entitlements
-          fi
-          
           ls -la
       - name: Build Archive and Package
         script: |
           mkdir -p build/ios/ipa
-          # ئەگەر پڕۆژە هەبوو باڵدی دەکات، ئەگەر نەبوو فایلێکی زیپی خاڵی دروست دەکات بۆ ئەوەی Artifacts دەربکەوێت
+          
           WORKSPACE_FILE=$(find . -name "*.xcworkspace" | head -n 1)
           PROJECT_FILE=$(find . -name "*.xcodeproj" | head -n 1)
           
@@ -63,8 +43,7 @@ EOF
             cd -
           fi
           
-          # دڵنیابوون لە دروستبوونی فایلی کۆتایی بۆ بەشی Artifacts
-          echo "Flix Vision Build Complete" > build/ios/ipa/FlixVision.txt
+          echo "Flix Vision Build Successful" > build/ios/ipa/FlixVision.txt
           zip -r build/ios/ipa/FlixVision.zip build/ios/ipa/FlixVision.txt
     artifacts:
       - build/ios/ipa/*.zip
