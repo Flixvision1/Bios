@@ -1,0 +1,14 @@
+workflows:
+  ios-workflow:
+    name: iOS Workflow
+    max_build_duration: 60
+    environment:
+      xcode: latest
+    scripts:
+      - name: Install dependencies
+        script: |
+          npm install
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /Users/builder/Library/Developer/Xcode/DerivedData/**/*.ipa
+      
